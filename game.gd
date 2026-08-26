@@ -22,6 +22,8 @@ var spray_active_sprites: SheetTexture
 @export var stamp_sprites: SheetTexture
 #@export var stamp_rotation_range
 
+var stamp_active_sprites: SheetTexture
+
 @export_subgroup("Select")
 @export var select_max_sides: Vector2i
 @export var select_max_size: int 
@@ -34,10 +36,14 @@ var active_paint_color: Color
 func _ready() -> void:
 	canvas_image = Image.create_empty(canvas_base_image.get_width(),canvas_base_image.get_height(),false,5 as Image.Format)
 	
-	active_paint_tool = 0 as PaintTools
+	active_paint_tool = 1 as PaintTools
+	
 	_change_paint_tool()
 	
 	_update_canvas()
+
+func _process(_delta: float) -> void:
+	$Sprite2D.global_position = get_global_mouse_position()
 
 
 func _change_paint_tool():
@@ -45,13 +51,22 @@ func _change_paint_tool():
 	
 	match active_paint_tool:
 		PaintTools.Spray:
-			print(active_paint_color)
+			$Sprite2D.frame = 1
 			spray_active_sprites = spray_sprites.duplicate()
 			var img = spray_active_sprites.atlas.get_image()
 			for x in range(img.get_width()):
 				for y in range(img.get_height()):
 					img.set_pixel(x,y,img.get_pixel(x,y) * active_paint_color)
 			spray_active_sprites.atlas = ImageTexture.create_from_image(img)
+		
+		PaintTools.Stamp:
+			$Sprite2D.frame = 0
+			stamp_active_sprites = stamp_sprites.duplicate()
+			var img = stamp_active_sprites.atlas.get_image()
+			for x in range(img.get_width()):
+				for y in range(img.get_height()):
+					img.set_pixel(x,y,img.get_pixel(x,y) * active_paint_color)
+			stamp_active_sprites.atlas = ImageTexture.create_from_image(img)
 
 
 func _update_canvas():
@@ -65,6 +80,12 @@ func _gui_input(event: InputEvent) -> void:
 			if event is InputEventMouseMotion:
 				if event.button_mask == 1:
 					var pos = event.position
-					canvas_image.blend_rect(spray_active_sprites.get_random_image(),Rect2i(Vector2i.ZERO,spray_sprites.get_size()),pos - spray_sprites.get_size()/2)
+					canvas_image.blend_rect(spray_active_sprites.get_random_image(),Rect2i(Vector2i.ZERO,spray_active_sprites.get_size()),pos - spray_active_sprites.get_size()/2)
 					_update_canvas()
-					
+	
+		PaintTools.Stamp:
+			if event is InputEventMouseButton:
+				if event.button_mask == 1 and not event.is_echo():
+					var pos = event.position
+					canvas_image.blend_rect(stamp_active_sprites.get_random_image(),Rect2i(Vector2i.ZERO,stamp_active_sprites.get_size()),pos - stamp_active_sprites.get_size()/2)
+					_update_canvas()
