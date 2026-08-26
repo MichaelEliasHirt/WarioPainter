@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo1x2os1xvsim"]
+
+[ext_resource type="Script" uid="uid://byuxccic8am54" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bg2l13fcu5qj3" path="res://assets/canvas_base.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://gv5mp31fw3la" path="res://assets/Spray_Sprites.png" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bmas6tfvt5epm" path="res://assets/canvas_border.png" id="3_7jktm"]
+[ext_resource type="Script" uid="uid://ds506noefgpc5" path="res://addons/SheetTexture/sheet_texture.gd" id="3_fc0e3"]
+
+[sub_resource type="Texture2D" id="Texture2D_7jktm"]
+resource_local_to_scene = false
+resource_name = ""
+script = ExtResource("3_fc0e3")
+atlas = ExtResource("2_feb5d")
+hframes = 4
+metadata/_custom_type_script = "uid://ds506noefgpc5"
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80nbo")
+canvas_base_image = ExtResource("2_e2o6t")
+canvas_border_image = ExtResource("3_7jktm")
+paint_colours = Array[Color]([Color(0, 1, 0, 1), Color(1, 0, 1, 1)])
+spray_sprites = SubResource("Texture2D_7jktm")
+spray_max_slide_distance = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23803589, 3.8215818e-05, 0.23803398, 1)
+
+[node name="CanvasBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e2o6t")
+
+[node name="Canvas" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasBorder" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7jktm")
