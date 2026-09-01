@@ -1,7 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1787780682
-game.gd::GDScript::4113640666048632729::1787780682::0::1::::<>Control<><>0<>0<><>::
-game.tscn::PackedScene::3424183787846454204::1787780682::0::1::::<><><>0<>0<><>::uid://byuxccic8am54::::res://game.gd<>uid://bg2l13fcu5qj3::::res://assets/canvas_base.png<>uid://gv5mp31fw3la::::res://assets/Spray_Sprites.png<>uid://bmas6tfvt5epm::::res://assets/canvas_border.png<>uid://ds506noefgpc5::::res://addons/SheetTexture/sheet_texture.gd<>uid://qxci3rmkutk5::::res://assets/Stamps_Map.png
+::res://::1788295879
+export_presets.cfg::TextFile::-1::1788295547::0::1::::<><><>0<>0<><>::
+game.gd::GDScript::4113640666048632729::1788294683::0::1::::<>Control<><>0<>0<><>::
+game.tscn::PackedScene::3424183787846454204::1788295879::0::1::::<><><>0<>0<><>::uid://byuxccic8am54::::res://game.gd<>uid://bg2l13fcu5qj3::::res://assets/canvas_base.png<>uid://gv5mp31fw3la::::res://assets/Spray_Sprites.png<>uid://bmas6tfvt5epm::::res://assets/canvas_border.png<>uid://ds506noefgpc5::::res://addons/SheetTexture/sheet_texture.gd<>uid://qxci3rmkutk5::::res://assets/Stamps_Map.png<>uid://bkjnw6bgj5rg1::::res://assets/PaintingTools.png<>uid://br1gybqh3b44o::::res://assets/Live2.png<>uid://bs8ctsh1wqgmx::::res://assets/Live1.png<>uid://cfifudsqqnqbm::::res://assets/Live3.png
 icon.svg::CompressedTexture2D::1790880795757653::1787696494::1787696503::1::::<><><>0<>0<>1d558fff71561543e2cf7e0d300c3350<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main.tscn::PackedScene::6827555765365424060::1787696708::0::1::::<><><>0<>0<><>::uid://bo1x2os1xvsim::::res://game.tscn
 README.md::TextFile::-1::1787696015::0::1::::<><><>0<>0<><>::
@@ -17,10 +18,13 @@ README.md::TextFile::-1::1764609762::0::1::::<><><>0<>0<><>::
 utils.gd::GDScript::6452893880382839864::1753035314::0::1::::<>RefCounted<><>0<>0<><>::
 ::res://addons/SheetTexture/::1787775484
 sheet_texture.gd::GDScript::8486166558235383070::1787775484::0::1::::SheetTexture<>Texture2D<><>0<>1<><>::
-::res://assets/::1787781647
+::res://assets/::1788291170
 canvas_base.png::CompressedTexture2D::2864007740939489342::1787696441::1787696447::1::::<><><>0<>0<>5cae118da23c2c235ffa1622d9b9a33a<>res://.godot/imported/canvas_base.png-ac7a2f24494835470dc1b799772c5320.ctex::
 canvas_border.png::CompressedTexture2D::3229836079478731162::1787779391::1787779393::1::::<><><>0<>0<>55feb5784234bb0db1e015fc2b2ff088<>res://.godot/imported/canvas_border.png-524dbdfb4bba30256b2380a4806c117d.ctex::
+Live1.png::CompressedTexture2D::3718100656576672679::1788291167::1788291170::1::::<><><>0<>0<>b178e1422c38c28a71464f398183a3b9<>res://.godot/imported/Live1.png-677a1d4d3d3bf48f9a39a105421058cc.ctex::
+Live2.png::CompressedTexture2D::3633712085751282052::1788291167::1788291170::1::::<><><>0<>0<>06ac01663a595540da6fc94dabe4839f<>res://.godot/imported/Live2.png-95c8972232ad49fa7a9752fa3844a777.ctex::
+Live3.png::CompressedTexture2D::5140640094576180054::1788291167::1788291170::1::::<><><>0<>0<>2dff635a062fd04109839c70b56bffb2<>res://.godot/imported/Live3.png-63ff1a19296be94c2916d918239d11c6.ctex::
 PaintingTools.png::CompressedTexture2D::3107718758286332074::1787781647::1787781649::1::::<><><>0<>0<>1f078b3231e3b48968b137bb9642da75<>res://.godot/imported/PaintingTools.png-c6b44259ff6fca56a7a94a4e17db5765.ctex::
 Spray_Map.png::CompressedTexture2D::3584687302104281745::1787696414::1787696447::1::::<><><>0<>0<>2957df7cf0a736e25dc98736d089890b<>res://.godot/imported/Spray_Map.png-1bcc7e1a9e2fbe95d8605e6eeb30ac08.ctex::
-Spray_Sprites.png::CompressedTexture2D::466328766266978214::1787774427::1787774428::1::::<><><>0<>0<>a0f59c9a09ae9d6cc7180d4b7e961297<>res://.godot/imported/Spray_Sprites.png-3798222631a623894afe0d9d643f40fb.ctex::
+Spray_Sprites.png::CompressedTexture2D::466328766266978214::1788296007::1788296012::1::::<><><>0<>0<>a0f59c9a09ae9d6cc7180d4b7e961297<>res://.godot/imported/Spray_Sprites.png-3798222631a623894afe0d9d643f40fb.ctex::
 Stamps_Map.png::CompressedTexture2D::1170639404363541054::1787696424::1787696447::1::::<><><>0<>0<>d58554e897af7382cff216588bb98fce<>res://.godot/imported/Stamps_Map.png-909d28ba3b393d0d63d377b6762ebeb7.ctex::

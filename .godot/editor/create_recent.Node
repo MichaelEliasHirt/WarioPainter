@@ -1,7 +1,9 @@
+Label
+Control
 Sprite2D
 ColorRect
+Timer
 MarginContainer
-Control
 TextureRect
 Node2D
 Node
