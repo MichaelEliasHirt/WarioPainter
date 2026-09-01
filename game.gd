@@ -47,7 +47,7 @@ var difficulty_multiplier: float
 var active_paint_tool: PaintTools
 var active_paint_color: Color
 
-var update_time: bool
+var update_time: bool = false
 
 signal percentage_reached
 
@@ -56,7 +56,7 @@ var lost_life: bool
 
 var won: bool
 
-func _ready() -> void:
+func start() -> void:
 	canvas_image = Image.create_empty(canvas_base_image.get_width(),canvas_base_image.get_height(),false,5 as Image.Format)
 	_update_canvas()
 	
@@ -101,7 +101,6 @@ func _ready() -> void:
 		$PauseScreen.hide()
 		if lifes_left <= 0:
 			break
-			
 		difficulty_multiplier += randf_range(0.02,0.10)
 		current_time = 0
 	
